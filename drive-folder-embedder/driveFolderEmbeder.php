@@ -1,15 +1,15 @@
 <?php
     /*
-        Plugin Name: Drive Folder Embeder
-        Plugin URI: https://github.com/azumbro/DriveFolderEmbeder
-        Version: 1.0.0
+        Plugin Name: Drive Folder Embedder
+        Plugin URI: https://github.com/azumbro/DriveFolderEmbedder
+        Version: 1.0.1
         Description: A Wordpress plugin that dynamically creates a table with file names and links for a shared Google Drive folder.
         Author: azumbro
     */
     
     defined('ABSPATH') or die('No script kiddies please!');
 
-    function driveFolderEmbeder($atts) {
+    function driveFolderEmbedder($atts) {
         extract(shortcode_atts(array(
             "folderid" => "",
             "sort" => "DESC",
@@ -20,7 +20,7 @@
         $htmlStr = str_replace("script", "", (addslashes (file_get_contents($baseURL . $folderid))));
         $tableID = rand();
         return "
-            <table id='driveFolderEmbeder-" . $tableID .  "' class='". $tablecssclass ."'>"
+            <table id='driveFolderEmbedder-" . $tableID .  "' class='". $tablecssclass ."'>"
                 . ($showheader == "True" ? "<thead><td>File Name</td><td></td></thead>" : "") .
                 "<tbody></tbody>
             </table>
@@ -59,10 +59,11 @@
                 }); 
                 parsedEntries.sort(sortFunction);
                 jQuery.each(parsedEntries, function(index, value) {
-                    jQuery('#driveFolderEmbeder-" . $tableID .  " tbody').append('<tr><td>' + value.name + '</td><td><a href=\"' + value.url + '\" target=\"_blank\">View</a></td></tr>');
+                    jQuery('#driveFolderEmbedder-" . $tableID .  " tbody').append('<tr><td>' + value.name + '</td><td><a href=\"' + value.url + '\" target=\"_blank\">View</a></td></tr>');
                 });
             </script>
         ";
     }
-    add_shortcode('DriveFolderEmbeder', 'driveFolderEmbeder');
+    add_shortcode('DriveFolderEmbeder', 'driveFolderEmbedder');
+    add_shortcode('DriveFolderEmbedder', 'driveFolderEmbedder');
 ?>
