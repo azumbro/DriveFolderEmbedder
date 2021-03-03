@@ -2,7 +2,7 @@
     /*
         Plugin Name: Drive Folder Embedder
         Plugin URI: https://github.com/azumbro/DriveFolderEmbedder
-        Version: 1.0.1
+        Version: 1.0.2
         Description: A Wordpress plugin that dynamically creates a table with file names and links for a shared Google Drive folder.
         Author: azumbro
     */
