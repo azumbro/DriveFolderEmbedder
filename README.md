@@ -1,15 +1,13 @@
-<p align="center">
-    <img src="drive-folder-embedder/assets/DriveFolderEmbedderLogo.png" width="50%;" style="margin: 0 auto;">
-</p>
+# Drive Folder Embedder
 
 A Wordpress plugin that dynamically creates a table with file names and links for a shared Google Drive folder.
 
-# Installation
+## Installation
 - Option 1: Download the plugin zip directly from the Wordpress plugin repository [here](https://wordpress.org/plugins/drive-folder-embeder/). You can then upload the zip file to the "plugins" directory of your Wordpress installation and activate it from the plugin menu.
 - Option 2: Select "Add New" from under "Plugins" on the left sidebar of the Wordpress admin dashboard and then search for "Drive Folder Embedder" in the search field.
 - Following installation, the plugin must be activated from the "Plugins" page on the Wordpress admin dashboard.
 
-# Usage
+## Usage
 - All plugin functionality is accessed through shortcodes in the format "[DriveFolderEmbedder]". Shortcode options are outlined below.
     - FolderID (required): The ID of the shared Google Drive folder from which to pull files.
         - To get your folder ID:
