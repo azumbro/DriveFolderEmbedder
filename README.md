@@ -1,5 +1,7 @@
 # Drive Folder Embedder
 
+**As of June 2025, this project has been retired.**
+
 A Wordpress plugin that dynamically creates a table with file names and links for a shared Google Drive folder.
 
 ## Installation
